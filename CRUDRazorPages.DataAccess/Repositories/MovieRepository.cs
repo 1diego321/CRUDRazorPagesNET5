@@ -1,6 +1,6 @@
-﻿using CRUDRazorPages.DataAccess.Contracts.IRepositories;
-using CRUDRazorPages.DataAccess.Contracts.ISQL;
-using CRUDRazorPages.DataAccess.Entities;
+﻿using CRUDRazorPages.DataAccess.Entities;
+using CRUDRazorPages.DataAccess.IRepositories;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -11,24 +11,27 @@ using System.Threading.Tasks;
 
 namespace CRUDRazorPages.DataAccess.Repositories
 {
-    public class MovieRepository : IGenericRepository<Movie>
+    public class MovieRepository : MasterRepository, IMovieRepository
     {
-        private readonly ISqlHelper _helper;
-
-        public MovieRepository(ISqlHelper helper)
+        public MovieRepository(IConfiguration configuration)
+            : base(configuration)
         {
-            _helper = helper;
+
         }
 
-        public async Task<List<Movie>> GetAll()
+        public async Task<List<MovieEntity>> GetAll()
         {
-            var dt = await _helper.ExecuteReaderAsync("");
+            var parameters = new List<SqlParameter> {
+                new SqlParameter("@Option", 1)
+            };
 
-            var lst = new List<Movie>();
+            var tableResult = await ExecuteReaderAsync("SP_Movie_Get", parameters);
 
-            foreach (DataRow row in dt.Rows)
+            var lst = new List<MovieEntity>();
+
+            foreach (DataRow row in tableResult.Rows)
             {
-                var oMovie = new Movie
+                var oMovie = new MovieEntity
                 {
                     Id = Convert.ToInt32(row[0]),
                     Title = row[1].ToString(),
@@ -45,24 +48,73 @@ namespace CRUDRazorPages.DataAccess.Repositories
             return lst;
         }
 
-        public Task<Movie> GetById()
+        public async Task<MovieEntity> GetById(int id)
         {
-            throw new NotImplementedException();
+            var parameters = new List<SqlParameter> {
+                new SqlParameter("@Option", 2)
+            };
+
+            MovieEntity oMovie = new();
+
+            var tableResult = await ExecuteReaderAsync("SP_Movie_Get", parameters);
+
+            foreach (DataRow row in tableResult.Rows)
+            {
+                oMovie = new MovieEntity
+                {
+                    Id = Convert.ToInt32(row[0]),
+                    Title = row[1].ToString(),
+                    Description = row[2].ToString(),
+                    Duration = Convert.ToInt32(row[3]),
+                    Premiere = Convert.ToDateTime(row[4]),
+                    Takings = Convert.ToInt32(row[5]),
+                    DirectorId = Convert.ToInt32(row[6])
+                };
+            }
+
+            return oMovie;
         }
 
-        public Task<int> Add(Movie entity)
+        public async Task<int> Add(MovieEntity entity)
         {
-            throw new NotImplementedException();
+            var parameters = new List<SqlParameter> {
+                new SqlParameter("@Option", 1),
+                new SqlParameter("@Title", entity.Title),
+                new SqlParameter("@Description", entity.Description),
+                new SqlParameter("@Duration", entity.Duration),
+                new SqlParameter("@Premiere", entity.Premiere),
+                new SqlParameter("@Takings", entity.Takings),
+                new SqlParameter("@DirectorId", entity.DirectorId)
+            };
+
+            return await ExecuteNonQueryAsync("SP_Movie_Transaction", parameters);
+        }
+        
+        public async Task<int> Update(MovieEntity entity)
+        {
+            var parameters = new List<SqlParameter> {
+                new SqlParameter("@Option", 2),
+                new SqlParameter("@Id", entity.Id),
+                new SqlParameter("@Title", entity.Title),
+                new SqlParameter("@Description", entity.Description),
+                new SqlParameter("@Duration", entity.Duration),
+                new SqlParameter("@Premiere", entity.Premiere),
+                new SqlParameter("@Takings", entity.Takings),
+                new SqlParameter("@DirectorId", entity.DirectorId)
+            };
+
+            return await ExecuteNonQueryAsync("SP_Movie_Transaction", parameters);
         }
 
-        public Task<int> Delete(Movie entity)
+        public async Task<int> Delete(int id)
         {
-            throw new NotImplementedException();
+            var parameters = new List<SqlParameter> {
+                new SqlParameter("@Option", 3),
+                new SqlParameter("@Id", id)
+            };
+
+            return await ExecuteNonQueryAsync("SP_Movie_Transaction", parameters);
         }
 
-        public Task<int> Update(Movie entity)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

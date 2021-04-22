@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CRUDRazorPages.DataAccess.Contracts.IRepositories
+namespace CRUDRazorPages.DataAccess.IRepositories
 {
     public interface IGenericRepository<T> where T : class
     {
         Task<List<T>> GetAll();
-        Task<T> GetById();
-        Task<int> Add(T entity);
-        Task<int> Update(T entity);
-        Task<int> Delete(T entity);
+        Task<T> GetById(int id);
+        Task<int> Add(T model);
+        Task<int> Update(T model);
+        Task<int> Delete(int id);
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CRUDRazorPages.Domain.ValueObjects;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace CRUDRazorPages.Domain.Models
 {
-    public class MovieModel
+    public class Movie
     {
+        #region PROPERTIES
         public int Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
@@ -15,5 +17,7 @@ namespace CRUDRazorPages.Domain.Models
         public DateTime Premiere { get; set; }
         public int Takings { get; set; }
         public int DirectorId { get; set; }
+        public EntityStatus EntityStatus { private get; set; }
+        #endregion
     }
 }

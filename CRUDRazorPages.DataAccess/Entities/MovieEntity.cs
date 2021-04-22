@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CRUDRazorPages.DataAccess.Entities
 {
-    public class Movie
+    public class MovieEntity
     {
         public int Id { get; set; }
         public string Title { get; set; }

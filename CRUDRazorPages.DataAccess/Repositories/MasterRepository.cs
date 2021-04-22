@@ -1,5 +1,4 @@
-﻿using CRUDRazorPages.DataAccess.Contracts.ISQL;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -8,17 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CRUDRazorPages.DataAccess
+namespace CRUDRazorPages.DataAccess.Repositories
 {
-    public class SQLHelper : ConnectionSQL, ISqlHelper
+    public class MasterRepository : ConnectionSQL
     {
-        public SQLHelper(IConfiguration configuration)
+        public MasterRepository(IConfiguration configuration)
             : base(configuration)
         {
 
         }
 
-        public async Task<int> ExecuteNonQueryAsync(string transactionSQL, List<SqlParameter> parameters)
+        protected async Task<int> ExecuteNonQueryAsync(string transactionSQL, List<SqlParameter> parameters)
         {
             using (var connection = GetConnection())
             {
@@ -35,7 +34,7 @@ namespace CRUDRazorPages.DataAccess
             }
         }
 
-        public async Task<DataTable> ExecuteReaderAsync(string transactionSQL, List<SqlParameter> parameters = null)
+        protected async Task<DataTable> ExecuteReaderAsync(string transactionSQL, List<SqlParameter> parameters = null)
         {
             using (var connection = GetConnection())
             {

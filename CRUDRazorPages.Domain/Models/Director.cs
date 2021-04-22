@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CRUDRazorPages.Domain.Models
 {
-    public class DirectorModel
+    public class Director
     {
         public int Id { get; set; }
         public string Name { get; set; }

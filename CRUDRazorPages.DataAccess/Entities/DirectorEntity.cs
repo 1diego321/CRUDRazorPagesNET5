@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CRUDRazorPages.DataAccess.Entities
 {
-    public class Director
+    public class DirectorEntity
     {
         public int Id { get; set; }
         public string Name { get; set; }
