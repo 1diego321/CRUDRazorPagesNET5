@@ -51,7 +51,8 @@ namespace CRUDRazorPages.DataAccess.Repositories
         public async Task<MovieEntity> GetById(int id)
         {
             var parameters = new List<SqlParameter> {
-                new SqlParameter("@Option", 2)
+                new SqlParameter("@Option", 2),
+                new SqlParameter("@Id", id)
             };
 
             MovieEntity oMovie = new();
