@@ -34,6 +34,8 @@ namespace CRUDRazorPages.Web
             services.AddScoped<IMovieService, MovieService>();
             services.AddScoped<IDirectorService, DirectorService>();
 
+            services.AddAutoMapper(typeof(Domain.Extensions.ApplicationMapper));
+
             services.AddRazorPages();
         }
 
