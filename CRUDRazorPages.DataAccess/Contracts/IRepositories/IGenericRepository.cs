@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CRUDRazorPages.DataAccess.Repositories.IRepositories
+namespace CRUDRazorPages.DataAccess.Contracts.IRepositories
 {
     public interface IGenericRepository<T> where T : class
     {
