@@ -1,0 +1,5 @@
+C:\Users\1dieg\Documents\.NET Platform\.NET CORE\ASP.NET Razor Pages (MVVM)\CRUDRazorPages\CRUDRazorPages.Domain\bin\Debug\net5.0\CRUDRazorPages.DataAccess.dll
+C:\Users\1dieg\Documents\.NET Platform\.NET CORE\ASP.NET Razor Pages (MVVM)\CRUDRazorPages\CRUDRazorPages.Domain\obj\Debug\net5.0\CRUDRazorPages.Domain.csprojAssemblyReference.cache
+C:\Users\1dieg\Documents\.NET Platform\.NET CORE\ASP.NET Razor Pages (MVVM)\CRUDRazorPages\CRUDRazorPages.Domain\obj\Debug\net5.0\CRUDRazorPages.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\1dieg\Documents\.NET Platform\.NET CORE\ASP.NET Razor Pages (MVVM)\CRUDRazorPages\CRUDRazorPages.Domain\obj\Debug\net5.0\CRUDRazorPages.Domain.AssemblyInfoInputs.cache
+C:\Users\1dieg\Documents\.NET Platform\.NET CORE\ASP.NET Razor Pages (MVVM)\CRUDRazorPages\CRUDRazorPages.Domain\obj\Debug\net5.0\CRUDRazorPages.Domain.AssemblyInfo.cs
