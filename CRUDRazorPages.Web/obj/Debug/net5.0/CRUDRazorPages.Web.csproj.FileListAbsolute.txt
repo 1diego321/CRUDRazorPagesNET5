@@ -51,3 +51,4 @@ C:\Users\1dieg\Documents\.NET Platform\.NET CORE\ASP.NET Razor Pages (MVVM)\CRUD
 C:\Users\1dieg\Documents\.NET Platform\.NET CORE\ASP.NET Razor Pages (MVVM)\CRUDRazorPages\CRUDRazorPages.Web\obj\Debug\net5.0\ref\CRUDRazorPages.Web.dll
 C:\Users\1dieg\Documents\.NET Platform\.NET CORE\ASP.NET Razor Pages (MVVM)\CRUDRazorPages\CRUDRazorPages.Web\obj\Debug\net5.0\CRUDRazorPages.Web.pdb
 C:\Users\1dieg\Documents\.NET Platform\.NET CORE\ASP.NET Razor Pages (MVVM)\CRUDRazorPages\CRUDRazorPages.Web\obj\Debug\net5.0\CRUDRazorPages.Web.genruntimeconfig.cache
+C:\Users\1dieg\Documents\.NET Platform\.NET CORE\ASP.NET Razor Pages (MVVM)\CRUDRazorPages\CRUDRazorPages.Web\obj\Debug\net5.0\Razor\Pages\Directors\Index.cshtml.g.cs
