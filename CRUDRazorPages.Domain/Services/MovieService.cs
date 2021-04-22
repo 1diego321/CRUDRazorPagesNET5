@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using CRUDRazorPages.DataAccess.Entities;
-using CRUDRazorPages.DataAccess.IRepositories;
+using CRUDRazorPages.DataAccess.Repositories.IRepositories;
 using CRUDRazorPages.Domain.Models;
 using CRUDRazorPages.Domain.Services.IServices;
 using System;

@@ -1,0 +1,12 @@
+C:\Users\1dieg\Documents\.NET Platform\.NET CORE\ASP.NET Razor Pages (MVVM)\CRUDRazorPages\CRUDRazorPages.DataAccess\bin\Debug\net5.0\CRUDRazorPages.DataAccess.deps.json
+C:\Users\1dieg\Documents\.NET Platform\.NET CORE\ASP.NET Razor Pages (MVVM)\CRUDRazorPages\CRUDRazorPages.DataAccess\bin\Debug\net5.0\CRUDRazorPages.DataAccess.dll
+C:\Users\1dieg\Documents\.NET Platform\.NET CORE\ASP.NET Razor Pages (MVVM)\CRUDRazorPages\CRUDRazorPages.DataAccess\bin\Debug\net5.0\ref\CRUDRazorPages.DataAccess.dll
+C:\Users\1dieg\Documents\.NET Platform\.NET CORE\ASP.NET Razor Pages (MVVM)\CRUDRazorPages\CRUDRazorPages.DataAccess\bin\Debug\net5.0\CRUDRazorPages.DataAccess.pdb
+C:\Users\1dieg\Documents\.NET Platform\.NET CORE\ASP.NET Razor Pages (MVVM)\CRUDRazorPages\CRUDRazorPages.DataAccess\obj\Debug\net5.0\CRUDRazorPages.DataAccess.csprojAssemblyReference.cache
+C:\Users\1dieg\Documents\.NET Platform\.NET CORE\ASP.NET Razor Pages (MVVM)\CRUDRazorPages\CRUDRazorPages.DataAccess\obj\Debug\net5.0\CRUDRazorPages.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\1dieg\Documents\.NET Platform\.NET CORE\ASP.NET Razor Pages (MVVM)\CRUDRazorPages\CRUDRazorPages.DataAccess\obj\Debug\net5.0\CRUDRazorPages.DataAccess.AssemblyInfoInputs.cache
+C:\Users\1dieg\Documents\.NET Platform\.NET CORE\ASP.NET Razor Pages (MVVM)\CRUDRazorPages\CRUDRazorPages.DataAccess\obj\Debug\net5.0\CRUDRazorPages.DataAccess.AssemblyInfo.cs
+C:\Users\1dieg\Documents\.NET Platform\.NET CORE\ASP.NET Razor Pages (MVVM)\CRUDRazorPages\CRUDRazorPages.DataAccess\obj\Debug\net5.0\CRUDRazorPages.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\1dieg\Documents\.NET Platform\.NET CORE\ASP.NET Razor Pages (MVVM)\CRUDRazorPages\CRUDRazorPages.DataAccess\obj\Debug\net5.0\CRUDRazorPages.DataAccess.dll
+C:\Users\1dieg\Documents\.NET Platform\.NET CORE\ASP.NET Razor Pages (MVVM)\CRUDRazorPages\CRUDRazorPages.DataAccess\obj\Debug\net5.0\ref\CRUDRazorPages.DataAccess.dll
+C:\Users\1dieg\Documents\.NET Platform\.NET CORE\ASP.NET Razor Pages (MVVM)\CRUDRazorPages\CRUDRazorPages.DataAccess\obj\Debug\net5.0\CRUDRazorPages.DataAccess.pdb

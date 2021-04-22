@@ -1,3 +1,8 @@
+using CRUDRazorPages.DataAccess.IRepositories;
+using CRUDRazorPages.DataAccess.Repositories;
+using CRUDRazorPages.DataAccess.Repositories.IRepositories;
+using CRUDRazorPages.Domain.Services;
+using CRUDRazorPages.Domain.Services.IServices;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -23,6 +28,12 @@ namespace CRUDRazorPages.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<IMovieRepository, MovieRepository>();
+            services.AddScoped<IDirectorRepository, DirectorRepository>();
+
+            services.AddScoped<IMovieService, MovieService>();
+            services.AddScoped<IDirectorService, DirectorService>();
+
             services.AddRazorPages();
         }
 

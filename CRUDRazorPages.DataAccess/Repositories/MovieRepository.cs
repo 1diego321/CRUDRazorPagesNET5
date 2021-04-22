@@ -1,5 +1,5 @@
 ﻿using CRUDRazorPages.DataAccess.Entities;
-using CRUDRazorPages.DataAccess.IRepositories;
+using CRUDRazorPages.DataAccess.Repositories.IRepositories;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;

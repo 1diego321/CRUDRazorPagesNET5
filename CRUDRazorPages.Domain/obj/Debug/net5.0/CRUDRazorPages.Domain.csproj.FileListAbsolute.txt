@@ -3,3 +3,4 @@ C:\Users\1dieg\Documents\.NET Platform\.NET CORE\ASP.NET Razor Pages (MVVM)\CRUD
 C:\Users\1dieg\Documents\.NET Platform\.NET CORE\ASP.NET Razor Pages (MVVM)\CRUDRazorPages\CRUDRazorPages.Domain\obj\Debug\net5.0\CRUDRazorPages.Domain.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\1dieg\Documents\.NET Platform\.NET CORE\ASP.NET Razor Pages (MVVM)\CRUDRazorPages\CRUDRazorPages.Domain\obj\Debug\net5.0\CRUDRazorPages.Domain.AssemblyInfoInputs.cache
 C:\Users\1dieg\Documents\.NET Platform\.NET CORE\ASP.NET Razor Pages (MVVM)\CRUDRazorPages\CRUDRazorPages.Domain\obj\Debug\net5.0\CRUDRazorPages.Domain.AssemblyInfo.cs
+C:\Users\1dieg\Documents\.NET Platform\.NET CORE\ASP.NET Razor Pages (MVVM)\CRUDRazorPages\CRUDRazorPages.Domain\obj\Debug\net5.0\CRUDRazorPages.Domain.csproj.CoreCompileInputs.cache

@@ -1,5 +1,4 @@
-﻿using CRUDRazorPages.Domain.ValueObjects;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,7 +16,6 @@ namespace CRUDRazorPages.Domain.Models
         public DateTime Premiere { get; set; }
         public int Takings { get; set; }
         public int DirectorId { get; set; }
-        public EntityStatus EntityStatus { private get; set; }
         #endregion
     }
 }
