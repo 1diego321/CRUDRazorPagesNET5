@@ -2,6 +2,7 @@
 using CRUDRazorPages.DataAccess.Entities;
 using CRUDRazorPages.DataAccess.Repositories.IRepositories;
 using CRUDRazorPages.Domain.Models;
+using CRUDRazorPages.Domain.Models.Movie;
 using CRUDRazorPages.Domain.Services.IServices;
 using System;
 using System.Collections.Generic;

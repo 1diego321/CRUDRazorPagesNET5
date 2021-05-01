@@ -19,12 +19,15 @@ namespace CRUDRazorPages.DataAccess.Repositories
 
         protected async Task<int> ExecuteNonQueryAsync(string transactionSQL, List<SqlParameter> parameters)
         {
+
             using (var connection = GetConnection())
             {
                 await connection.OpenAsync();
 
                 using (var command = new SqlCommand(transactionSQL, connection))
                 {
+                    command.CommandType = CommandType.StoredProcedure;
+
                     parameters.ForEach(p => command.Parameters.Add(p));
 
                     int result = await command.ExecuteNonQueryAsync();
@@ -42,7 +45,9 @@ namespace CRUDRazorPages.DataAccess.Repositories
 
                 using (var command = new SqlCommand(transactionSQL, connection))
                 {
-                    if(parameters != null) parameters.ForEach(p => command.Parameters.Add(p));
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    if (parameters != null) parameters.ForEach(p => command.Parameters.Add(p));
 
                     using (var reader = await command.ExecuteReaderAsync())
                     {

@@ -11,7 +11,7 @@ namespace CRUDRazorPages.DataAccess.Repositories
     public abstract class ConnectionSQL
     {
         private readonly IConfiguration _configuration;
-        private const string _connectionStringName = "DefaultConnection";
+        private const string _DefaultConnection = "DefaultConnection";
 
         public ConnectionSQL(IConfiguration configuration)
         {
@@ -20,7 +20,7 @@ namespace CRUDRazorPages.DataAccess.Repositories
 
         protected SqlConnection GetConnection()
         {
-            return new SqlConnection(_configuration.GetConnectionString(_connectionStringName));
+            return new SqlConnection(_configuration.GetConnectionString(_DefaultConnection).ToString());
         }
     }
 }

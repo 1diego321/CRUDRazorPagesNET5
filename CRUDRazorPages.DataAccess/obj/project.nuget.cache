@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LsKcEQYZWs4wEHfDuH07z/XsJnyOxClLo5oDTqH4IZ3vsGhHW7Mrg9Kng/xIhuTXCEGJJQPrBHBaA9/uXHO7Ug==",
+  "dgSpecHash": "ux8lhSYZfzJFXwYCI1JyAhyTEXJWZW5bCRMETlMt5ypqNbxa82WWIEGwvEEe9EJEkB16yh/KJ0257SimWZFKGw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\1dieg\\Documents\\.NET Platform\\.NET CORE\\ASP.NET Razor Pages (MVVM)\\CRUDRazorPages\\CRUDRazorPages.DataAccess\\CRUDRazorPages.DataAccess.csproj",
+  "projectFilePath": "C:\\Users\\1dieg\\Documents\\.NET\\.NET CORE\\ASP.NET Razor Pages (MVVM)\\CRUDRazorPages\\CRUDRazorPages.DataAccess\\CRUDRazorPages.DataAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\1dieg\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\1dieg\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

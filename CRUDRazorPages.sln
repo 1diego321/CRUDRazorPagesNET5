@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUDRazorPages.Web", "CRUDRazorPages.Web\CRUDRazorPages.Web.csproj", "{53AEA11F-96CE-448F-A075-AF5AC3374C5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CRUDRazorPages.Web", "CRUDRazorPages.Web\CRUDRazorPages.Web.csproj", "{53AEA11F-96CE-448F-A075-AF5AC3374C5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUDRazorPages.DataAccess", "CRUDRazorPages.DataAccess\CRUDRazorPages.DataAccess.csproj", "{F5FD231C-D3F9-471F-9A96-D198D327C0F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CRUDRazorPages.DataAccess", "CRUDRazorPages.DataAccess\CRUDRazorPages.DataAccess.csproj", "{F5FD231C-D3F9-471F-9A96-D198D327C0F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUDRazorPages.Domain", "CRUDRazorPages.Domain\CRUDRazorPages.Domain.csproj", "{C9602B4B-818F-4ACB-A22B-114355BF60C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CRUDRazorPages.Domain", "CRUDRazorPages.Domain\CRUDRazorPages.Domain.csproj", "{C9602B4B-818F-4ACB-A22B-114355BF60C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

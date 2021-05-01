@@ -1,6 +1,81 @@
 ﻿@page
 @model CRUDRazorPages.Web.Pages.Movies.IndexModel
 @{
+    ViewData["Title"] = "Lista de Peliculas";
 }
 
-peliculas
+
+@if (Model.Message != null)
+{
+    <div class="alert alert-info alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        @Model.Message
+    </div>
+}
+
+<div class="container row">
+    <div class="col-6">
+        <h2 class="text-info">Lista de Peliculas</h2>
+    </div>
+    <div class="col-6 text-right">
+        <a asp-page="Create" class="btn btn-primary">Nueva Pelicula</a>
+    </div>
+
+    <form method="post">
+        @if (Model.Movies.Count() > 0)
+        {
+            <table class="table table-hover">
+                <thead>
+                    <tr class="">
+                        <td class="font-weight-bold">
+                            @Html.DisplayNameFor(m => m.Movies.FirstOrDefault().Title)
+                        </td>
+                        <td class="font-weight-bold">
+                            @Html.DisplayNameFor(m => m.Movies.FirstOrDefault().Description)
+                        </td>
+                        <td class="font-weight-bold">
+                            @Html.DisplayNameFor(m => m.Movies.FirstOrDefault().Duration)
+                        </td>
+                        <td class="font-weight-bold">
+                            @Html.DisplayNameFor(m => m.Movies.FirstOrDefault().Premiere)
+                        </td>
+                        <td class="font-weight-bold">
+                            @Html.DisplayNameFor(m => m.Movies.FirstOrDefault().Takings)
+                        </td>
+                        <td class="font-weight-bold">Acciones</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var movie in Model.Movies)
+                    {
+                        <tr>
+                            <td>
+                                @movie.Title
+                            </td>
+                            <td>
+                                @movie.Description
+                            </td>
+                            <td>
+                                @movie.Duration
+                            </td>
+                            <td>
+                                @movie.Premiere.ToString("dd/MM/yyyy")
+                            </td>
+                            <td>
+                                $@movie.Takings
+                            </td>
+                            <td><a asp-page="Edit" asp-route-id="@movie.Id" class="btn btn-success btn-sm">Editar</a><button asp-page-handler="Delete" asp-route-id="@movie.Id" class="btn btn-danger btn-sm" onclick="return confirm('Seguro de eliminar la pelicula?')">Borrar</button></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <span>No hay datos para mostrar.</span>
+        }
+    </form>
+</div>
+

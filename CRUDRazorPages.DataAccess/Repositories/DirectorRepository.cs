@@ -70,13 +70,37 @@ namespace CRUDRazorPages.DataAccess.Repositories
             return oDirector;
         }
 
+        public async Task<List<DirectorEntity>> GetForDDL()
+        {
+            var parameters = new List<SqlParameter> {
+                new SqlParameter("@Option", 3)
+            };
+
+            var tableResult = await ExecuteReaderAsync("SP_Director_Get", parameters);
+
+            var lst = new List<DirectorEntity>();
+
+            foreach (DataRow row in tableResult.Rows)
+            {
+                var oMovie = new DirectorEntity
+                {
+                    Id = Convert.ToInt32(row[0]),
+                    Name = row[1].ToString()
+                };
+
+                lst.Add(oMovie);
+            }
+
+            return lst;
+        }
+
         public async Task<int> Add(DirectorEntity entity)
         {
             var parameters = new List<SqlParameter> {
                 new SqlParameter("@Option", 1),
                 new SqlParameter("@Name", entity.Name),
-                new SqlParameter("@Birthdate", entity.Birthdate),
                 new SqlParameter("@AmountOfPrizes", entity.AmountOfPrizes),       
+                new SqlParameter("@Birthdate", entity.Birthdate),
             };
 
             return await ExecuteNonQueryAsync("SP_Director_Transaction", parameters);
@@ -86,6 +110,7 @@ namespace CRUDRazorPages.DataAccess.Repositories
         {
             var parameters = new List<SqlParameter> {
                 new SqlParameter("@Option", 2),
+                new SqlParameter("@Id", entity.Id),
                 new SqlParameter("@Name", entity.Name),
                 new SqlParameter("@Birthdate", entity.Birthdate),
                 new SqlParameter("@AmountOfPrizes", entity.AmountOfPrizes),
@@ -104,5 +129,7 @@ namespace CRUDRazorPages.DataAccess.Repositories
 
             return await ExecuteNonQueryAsync("SP_Director_Transaction", parameters);
         }
+
+        
     }
 }

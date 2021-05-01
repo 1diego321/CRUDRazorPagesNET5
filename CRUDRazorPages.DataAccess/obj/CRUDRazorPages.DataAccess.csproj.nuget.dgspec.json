@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\1dieg\\Documents\\.NET Platform\\.NET CORE\\ASP.NET Razor Pages (MVVM)\\CRUDRazorPages\\CRUDRazorPages.DataAccess\\CRUDRazorPages.DataAccess.csproj": {}
+    "C:\\Users\\1dieg\\Documents\\.NET\\.NET CORE\\ASP.NET Razor Pages (MVVM)\\CRUDRazorPages\\CRUDRazorPages.DataAccess\\CRUDRazorPages.DataAccess.csproj": {}
   },
   "projects": {
-    "C:\\Users\\1dieg\\Documents\\.NET Platform\\.NET CORE\\ASP.NET Razor Pages (MVVM)\\CRUDRazorPages\\CRUDRazorPages.DataAccess\\CRUDRazorPages.DataAccess.csproj": {
+    "C:\\Users\\1dieg\\Documents\\.NET\\.NET CORE\\ASP.NET Razor Pages (MVVM)\\CRUDRazorPages\\CRUDRazorPages.DataAccess\\CRUDRazorPages.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\1dieg\\Documents\\.NET Platform\\.NET CORE\\ASP.NET Razor Pages (MVVM)\\CRUDRazorPages\\CRUDRazorPages.DataAccess\\CRUDRazorPages.DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\1dieg\\Documents\\.NET\\.NET CORE\\ASP.NET Razor Pages (MVVM)\\CRUDRazorPages\\CRUDRazorPages.DataAccess\\CRUDRazorPages.DataAccess.csproj",
         "projectName": "CRUDRazorPages.DataAccess",
-        "projectPath": "C:\\Users\\1dieg\\Documents\\.NET Platform\\.NET CORE\\ASP.NET Razor Pages (MVVM)\\CRUDRazorPages\\CRUDRazorPages.DataAccess\\CRUDRazorPages.DataAccess.csproj",
+        "projectPath": "C:\\Users\\1dieg\\Documents\\.NET\\.NET CORE\\ASP.NET Razor Pages (MVVM)\\CRUDRazorPages\\CRUDRazorPages.DataAccess\\CRUDRazorPages.DataAccess.csproj",
         "packagesPath": "C:\\Users\\1dieg\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\1dieg\\Documents\\.NET Platform\\.NET CORE\\ASP.NET Razor Pages (MVVM)\\CRUDRazorPages\\CRUDRazorPages.DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\1dieg\\Documents\\.NET\\.NET CORE\\ASP.NET Razor Pages (MVVM)\\CRUDRazorPages\\CRUDRazorPages.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -76,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

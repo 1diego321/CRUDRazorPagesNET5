@@ -2,6 +2,8 @@
 using CRUDRazorPages.DataAccess.Entities;
 using CRUDRazorPages.DataAccess.Repositories.IRepositories;
 using CRUDRazorPages.Domain.Models;
+using CRUDRazorPages.Domain.Models.Director;
+using CRUDRazorPages.Domain.Models.Director.ViewModel;
 using CRUDRazorPages.Domain.Services.IServices;
 using System;
 using System.Collections.Generic;
@@ -45,6 +47,11 @@ namespace CRUDRazorPages.Domain.Services
         public async Task<int> Delete(int id)
         {
             return await _repository.Delete(id);
+        }
+
+        public async Task<List<DirectorForDDLViewModel>> GetForDDL()
+        {
+            return (await _repository.GetForDDL()).Select(x => _mapper.Map<DirectorForDDLViewModel>(x)).ToList();
         }
     }
 }

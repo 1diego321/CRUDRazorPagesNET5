@@ -10,6 +10,6 @@ namespace CRUDRazorPages.DataAccess.Repositories.IRepositories
 {
     public interface IDirectorRepository : IGenericRepository<DirectorEntity>
     {
-
+        Task<List<DirectorEntity>> GetForDDL();
     }
 }

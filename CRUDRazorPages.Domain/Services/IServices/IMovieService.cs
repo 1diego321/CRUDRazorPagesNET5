@@ -1,4 +1,4 @@
-﻿using CRUDRazorPages.Domain.Models;
+﻿using CRUDRazorPages.Domain.Models.Movie;
 using System;
 using System.Collections.Generic;
 using System.Linq;

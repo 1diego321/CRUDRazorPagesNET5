@@ -11,8 +11,9 @@ namespace CRUDRazorPages.Domain.Extensions
     {
         public ApplicationMapper()
         {
-            CreateMap<DataAccess.Entities.MovieEntity, Models.Movie>().ReverseMap();
-            CreateMap<DataAccess.Entities.DirectorEntity, Models.Director>().ReverseMap();
+            CreateMap<DataAccess.Entities.MovieEntity, Models.Movie.Movie>().ReverseMap();
+            CreateMap<DataAccess.Entities.DirectorEntity, Models.Director.Director>().ReverseMap();
+            CreateMap<DataAccess.Entities.DirectorEntity, Models.Director.ViewModel.DirectorForDDLViewModel>();
         }
     }
 }
