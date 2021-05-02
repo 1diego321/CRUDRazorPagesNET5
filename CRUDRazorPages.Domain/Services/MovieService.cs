@@ -3,6 +3,7 @@ using CRUDRazorPages.DataAccess.Entities;
 using CRUDRazorPages.DataAccess.Repositories.IRepositories;
 using CRUDRazorPages.Domain.Models;
 using CRUDRazorPages.Domain.Models.Movie;
+using CRUDRazorPages.Domain.Models.Movie.ViewModel;
 using CRUDRazorPages.Domain.Services.IServices;
 using System;
 using System.Collections.Generic;
@@ -31,6 +32,11 @@ namespace CRUDRazorPages.Domain.Services
         public async Task<Movie> GetById(int id)
         {
             return _mapper.Map<Movie>(await _repository.GetById(id));
+        }
+
+        public async Task<MovieDetailsViewModel> GetForDetailsById(int id)
+        {
+            return _mapper.Map<MovieDetailsViewModel>(await _repository.GetForDetailsById(id));
         }
 
         public async Task<int> Add(Movie model)

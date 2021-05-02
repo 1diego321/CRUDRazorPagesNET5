@@ -107,3 +107,4 @@ C:\Users\1dieg\Documents\.NET\.NET CORE\ASP.NET Razor Pages (MVVM)\CRUDRazorPage
 C:\Users\1dieg\Documents\.NET\.NET CORE\ASP.NET Razor Pages (MVVM)\CRUDRazorPages\CRUDRazorPages.Web\obj\Debug\net5.0\CRUDRazorPages.Web.pdb
 C:\Users\1dieg\Documents\.NET\.NET CORE\ASP.NET Razor Pages (MVVM)\CRUDRazorPages\CRUDRazorPages.Web\obj\Debug\net5.0\CRUDRazorPages.Web.genruntimeconfig.cache
 C:\Users\1dieg\Documents\.NET\.NET CORE\ASP.NET Razor Pages (MVVM)\CRUDRazorPages\CRUDRazorPages.Web\obj\Debug\net5.0\Razor\Pages\Movies\Create.cshtml.g.cs
+C:\Users\1dieg\Documents\.NET\.NET CORE\ASP.NET Razor Pages (MVVM)\CRUDRazorPages\CRUDRazorPages.Web\obj\Debug\net5.0\Razor\Pages\Movies\Details.cshtml.g.cs

@@ -76,6 +76,35 @@ namespace CRUDRazorPages.DataAccess.Repositories
             return oMovie;
         }
 
+        public async Task<MovieEntity> GetForDetailsById(int id)
+        {
+            var parameters = new List<SqlParameter> {
+                new SqlParameter("@Option", 3),
+                new SqlParameter("@Id", id)
+            };
+
+            MovieEntity oMovie = new();
+
+            var tableResult = await ExecuteReaderAsync("SP_Movie_Get", parameters);
+
+            foreach (DataRow row in tableResult.Rows)
+            {
+                oMovie = new MovieEntity
+                {
+                    Id = Convert.ToInt32(row[0]),
+                    Title = row[1].ToString(),
+                    Description = row[2].ToString(),
+                    Duration = Convert.ToInt32(row[3]),
+                    Premiere = Convert.ToDateTime(row[4]),
+                    Takings = Convert.ToInt32(row[5]),
+                    DirectorId = Convert.ToInt32(row[6]),
+                    Director = new DirectorEntity { Name = row[7].ToString() }
+                };
+            }
+
+            return oMovie;
+        }
+
         public async Task<int> Add(MovieEntity entity)
         {
             var parameters = new List<SqlParameter> {
@@ -116,6 +145,5 @@ namespace CRUDRazorPages.DataAccess.Repositories
 
             return await ExecuteNonQueryAsync("SP_Movie_Transaction", parameters);
         }
-
     }
 }

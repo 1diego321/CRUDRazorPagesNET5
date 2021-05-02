@@ -28,7 +28,7 @@
         {
             <table class="table table-hover">
                 <thead>
-                    <tr class="">
+                    <tr>
                         <td class="font-weight-bold">
                             @Html.DisplayNameFor(m => m.Movies.FirstOrDefault().Title)
                         </td>
@@ -50,7 +50,9 @@
                 <tbody>
                     @foreach (var movie in Model.Movies)
                     {
-                        <tr>
+                        <tr class="movie_item">
+                            <input type="hidden" name="hidden" id="hidden" value="@movie.Id" />
+
                             <td>
                                 @movie.Title
                             </td>
@@ -58,7 +60,7 @@
                                 @movie.Description
                             </td>
                             <td>
-                                @movie.Duration
+                                @movie.Duration minutos
                             </td>
                             <td>
                                 @movie.Premiere.ToString("dd/MM/yyyy")
@@ -79,3 +81,5 @@
     </form>
 </div>
 
+
+<script src="~/js/movie.js"></script>

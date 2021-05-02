@@ -1,4 +1,9 @@
 ﻿using AutoMapper;
+using CRUDRazorPages.DataAccess.Entities;
+using CRUDRazorPages.Domain.Models.Director;
+using CRUDRazorPages.Domain.Models.Director.ViewModel;
+using CRUDRazorPages.Domain.Models.Movie;
+using CRUDRazorPages.Domain.Models.Movie.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,9 +16,15 @@ namespace CRUDRazorPages.Domain.Extensions
     {
         public ApplicationMapper()
         {
-            CreateMap<DataAccess.Entities.MovieEntity, Models.Movie.Movie>().ReverseMap();
-            CreateMap<DataAccess.Entities.DirectorEntity, Models.Director.Director>().ReverseMap();
-            CreateMap<DataAccess.Entities.DirectorEntity, Models.Director.ViewModel.DirectorForDDLViewModel>();
+            //Movie
+            CreateMap<MovieEntity, Movie>().ReverseMap();
+            CreateMap<MovieEntity, MovieDetailsViewModel>()
+                .ForMember(dest => dest.DirectorName, opt => opt.MapFrom(src => src.Director.Name))
+                .ReverseMap();
+
+            //Director
+            CreateMap<DirectorEntity, Director>().ReverseMap();
+            CreateMap<DirectorEntity, DirectorForDDLViewModel>();
         }
     }
 }

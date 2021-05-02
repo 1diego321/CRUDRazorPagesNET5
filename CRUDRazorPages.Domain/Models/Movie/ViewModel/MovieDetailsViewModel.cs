@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CRUDRazorPages.Domain.Models.Movie
+namespace CRUDRazorPages.Domain.Models.Movie.ViewModel
 {
-    public class Movie
+    public class MovieDetailsViewModel
     {
         public int Id { get; set; }
 
@@ -33,6 +33,8 @@ namespace CRUDRazorPages.Domain.Models.Movie
 
         [Required(ErrorMessage = "El campo {0} es obligatorio.")]
         [Display(Name = "Director")]
+        public string DirectorName { get; set; }
+
         public int DirectorId { get; set; }
     }
 }

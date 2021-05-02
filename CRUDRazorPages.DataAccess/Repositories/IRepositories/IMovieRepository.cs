@@ -10,5 +10,6 @@ namespace CRUDRazorPages.DataAccess.Repositories.IRepositories
 {
     public interface IMovieRepository : IGenericRepository<MovieEntity>
     {
+        Task<MovieEntity> GetForDetailsById(int id);
     }
 }

@@ -108,6 +108,17 @@ BEGIN
 			   DirectorId
 		FROM Movie
 		WHERE Id = @Id;
+	ELSE IF @Option = 3		--GET_FOR_DETAILS_BY_ID
+		SELECT m.Id,
+			   m.Title,
+			   m.Description,
+			   m.Duration,
+			   m.Premiere,
+			   m.Takings,
+			   m.DirectorId,
+			   d.Name
+		FROM Movie m, Director d
+		WHERE m.Id = @Id AND m.DirectorId = d.Id;
 END
 GO
 
