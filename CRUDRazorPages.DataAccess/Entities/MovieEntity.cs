@@ -14,6 +14,7 @@ namespace CRUDRazorPages.DataAccess.Entities
         public int Duration { get; set; }
         public DateTime Premiere { get; set; }
         public int Takings { get; set; }
+        public string ImageURL { get; set; }
         public int DirectorId { get; set; }
         public DirectorEntity Director { get; set; }
     }

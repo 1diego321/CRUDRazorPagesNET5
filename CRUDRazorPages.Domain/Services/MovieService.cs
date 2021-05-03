@@ -5,8 +5,10 @@ using CRUDRazorPages.Domain.Models;
 using CRUDRazorPages.Domain.Models.Movie;
 using CRUDRazorPages.Domain.Models.Movie.ViewModel;
 using CRUDRazorPages.Domain.Services.IServices;
+using Microsoft.AspNetCore.Hosting;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,11 +19,13 @@ namespace CRUDRazorPages.Domain.Services
     {
         private readonly IMovieRepository _repository;
         private readonly IMapper _mapper;
+        private readonly IWebHostEnvironment _hostEnvironment;
 
-        public MovieService(IMovieRepository repository, IMapper mapper)
+        public MovieService(IMovieRepository repository, IMapper mapper, IWebHostEnvironment hostEnvironment)
         {
             _repository = repository;
             _mapper = mapper;
+            _hostEnvironment = hostEnvironment;
         }
 
         public async Task<List<Movie>> GetAll()
@@ -41,6 +45,23 @@ namespace CRUDRazorPages.Domain.Services
 
         public async Task<int> Add(Movie model)
         {
+            if (model.Image != null)
+            {
+                string mainRoute = _hostEnvironment.WebRootPath;
+                string routeImgFolder = Path.Combine(mainRoute, @"img");
+                string imageName = Guid.NewGuid().ToString() + Path.GetExtension(model.Image.FileName);
+                string imageRoute = Path.Combine(routeImgFolder, imageName);
+
+                Directory.CreateDirectory(routeImgFolder);
+
+                using (var fs = new FileStream(imageRoute, FileMode.Create))
+                {
+                    model.Image.CopyTo(fs);
+
+                    model.ImageURL = @"\img\" + imageName;
+                }
+            }
+
             return await _repository.Add(_mapper.Map<MovieEntity>(model));
         }
 

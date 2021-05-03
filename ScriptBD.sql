@@ -27,6 +27,7 @@ CREATE TABLE Movie(
 	Duration int not null,
 	Premiere date not null,
 	Takings int not null,
+	ImageURL varchar(500),
 	DirectorId int not null,
 
 	PRIMARY KEY(Id),
@@ -115,6 +116,7 @@ BEGIN
 			   m.Duration,
 			   m.Premiere,
 			   m.Takings,
+			   m.ImageURL,
 			   m.DirectorId,
 			   d.Name
 		FROM Movie m, Director d
@@ -130,13 +132,14 @@ CREATE PROCEDURE SP_Movie_Transaction(
 	@Duration		int = null,
 	@Premiere		date = null,
 	@Takings		int = null,	
+	@ImageURL		varchar(500) = null,
 	@DirectorId		int = null
 )
 AS 
 BEGIN
 	IF @Option = 1			--INSERT
-		INSERT INTO Movie(Title,Description,Duration,Premiere,Takings,DirectorId)
-		VALUES(@Title,@Description,@Duration,@Premiere,@Takings,@DirectorId);
+		INSERT INTO Movie(Title,Description,Duration,Premiere,Takings,ImageURL,DirectorId)
+		VALUES(@Title,@Description,@Duration,@Premiere,@Takings,@ImageURL,@DirectorId);
 	ELSE IF @Option = 2		--UPDATE
 		UPDATE Movie SET Title = @Title,
 						 Description = @Description,
@@ -162,3 +165,4 @@ GO
 
 
 select * from CrudRazorPages.dbo.Movie
+

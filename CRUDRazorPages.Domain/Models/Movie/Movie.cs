@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -30,6 +31,11 @@ namespace CRUDRazorPages.Domain.Models.Movie
         [Required(ErrorMessage = "El campo {0} es obligatorio.")]
         [Display(Name = "Recaudación")]
         public int Takings { get; set; }
+
+        [Display(Name = "Imagen")]
+        public IFormFile Image { get; set; }
+
+        public string ImageURL { get; set; }
 
         [Required(ErrorMessage = "El campo {0} es obligatorio.")]
         [Display(Name = "Director")]

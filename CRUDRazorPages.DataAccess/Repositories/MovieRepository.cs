@@ -97,8 +97,9 @@ namespace CRUDRazorPages.DataAccess.Repositories
                     Duration = Convert.ToInt32(row[3]),
                     Premiere = Convert.ToDateTime(row[4]),
                     Takings = Convert.ToInt32(row[5]),
-                    DirectorId = Convert.ToInt32(row[6]),
-                    Director = new DirectorEntity { Name = row[7].ToString() }
+                    ImageURL = row[6].ToString(),
+                    DirectorId = Convert.ToInt32(row[7]),
+                    Director = new DirectorEntity { Name = row[8].ToString() }
                 };
             }
 
@@ -114,6 +115,7 @@ namespace CRUDRazorPages.DataAccess.Repositories
                 new SqlParameter("@Duration", entity.Duration),
                 new SqlParameter("@Premiere", entity.Premiere),
                 new SqlParameter("@Takings", entity.Takings),
+                new SqlParameter("@ImageURL", entity.ImageURL),
                 new SqlParameter("@DirectorId", entity.DirectorId)
             };
 

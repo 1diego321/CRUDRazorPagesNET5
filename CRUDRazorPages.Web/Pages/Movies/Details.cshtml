@@ -2,79 +2,68 @@
 @model CRUDRazorPages.Web.Pages.Movies.DetailsModel
 @{
     ViewData["Title"] = "Detalles";
+
+    string url = "";
+}
+
+@if (Model.Movie.ImageURL != string.Empty)
+{
+    url = Model.Movie.ImageURL;
+}
+else
+{
+    url = "/img/default.jpg";
 }
 
 <h2 class="text-info">Detalles</h2>
 
 <div class="border">
     <div class="container" style="padding:30px;">
-        <div class="form-group">
-            <div class="row">
-                <div class="col-sm-2">
-                    <label asp-for="Movie.Title" class="font-weight-bold"></label>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <div class="">
+                        <figure align="center">
+                            <img style="border-radius: 10px;" src="@url" width="600" class="img-fluid" alt="@Model.Movie.Title" />
+                            <figcaption class="h3 font-weight-bold">@Model.Movie.Title</figcaption>
+                        </figure>
+                    </div>
                 </div>
-                <div class="col-sm-4">
-                    @Html.DisplayFor(x => x.Movie.Title)
-                </div>
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="row">
-                <div class="col-sm-2">
-                    <label asp-for="Movie.Description" class="font-weight-bold"></label>
-                </div>
-                <div class="col-sm-4">
-                    @Html.DisplayFor(x => x.Movie.Description)
-                </div>
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="row">
-                <div class="col-sm-2">
-                    <label asp-for="Movie.Duration" class="font-weight-bold"></label>
-                </div>
-                <div class="col-sm-4">
-                    @Html.DisplayFor(x => x.Movie.Duration, new { @class = ""}) minutos.
-                </div>
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="row">
-                <div class="col-sm-2">
-                    <label asp-for="Movie.Premiere" class="font-weight-bold"></label>
-                </div>
-                <div class="col-sm-4">
-                    @Model.Movie.Premiere.ToShortDateString()
-                </div>
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="row">
-                <div class="col-sm-2">
-                    <label asp-for="Movie.Takings" class="font-weight-bold"></label>
-                </div>
-                <div class="col-sm-4">
-                    $@Html.DisplayFor(x => x.Movie.Takings)
+                <div class="form-group">
+                        <label asp-for="Movie.Description" class="font-weight-bold"></label>
+                        <p>@Model.Movie.Description</p>
+                    <div class="form-group">
+                        <label asp-for="Movie.Duration" class="font-weight-bold"></label>
+                        <div>
+                            @Html.DisplayFor(x => x.Movie.Duration, new { @class = "" }) minutos.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Movie.Premiere" class="font-weight-bold"></label>
+                        <div>
+                            @Model.Movie.Premiere.ToShortDateString()
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Movie.Takings" class="font-weight-bold"></label>
+                        <div>
+                            $@Html.DisplayFor(x => x.Movie.Takings)
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Movie.DirectorName" class="font-weight-bold"></label>
+                        <div>
+                            <a href="../Directors/Details?id=@Model.Movie.DirectorId">@Model.Movie.DirectorName</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="form-group">
-            <div class="row">
-                <div class="col-sm-2">
-                    <label asp-for="Movie.DirectorName" class="font-weight-bold"></label>
-                </div>     
-                <div class="col-sm-4">
-                    <a href="../Directors/Details?id=@Model.Movie.DirectorId">@Model.Movie.DirectorName</a>
-                </div>
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="row">
-                <div class="col-sm-2 offset-sm-2">
-                    <a asp-page="Edit" asp-route-id="@Model.Movie.Id" class="btn btn-success form-control">Editar</a>
-                </div>
-                <div class="col-sm-2">
-                    <a asp-page="Index" class="btn btn-info form-control">Volver</a>
+
+            <div class="col-sm-12">
+                <div style="margin: 0 auto; margin-top:5px;">
+                    <a asp-page="Edit" asp-route-id="@Model.Movie.Id" class="btn btn-success btn-block">Editar</a>
+
+                    <a asp-page="Index" class="btn btn-info btn-block">Volver</a>
                 </div>
             </div>
         </div>

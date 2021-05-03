@@ -28,12 +28,15 @@ namespace CRUDRazorPages.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //Repositories
             services.AddScoped<IMovieRepository, MovieRepository>();
             services.AddScoped<IDirectorRepository, DirectorRepository>();
 
+            //Services
             services.AddScoped<IMovieService, MovieService>();
             services.AddScoped<IDirectorService, DirectorService>();
 
+            //AutoMapper
             services.AddAutoMapper(typeof(Domain.Extensions.ApplicationMapper));
 
             services.AddRazorPages();
