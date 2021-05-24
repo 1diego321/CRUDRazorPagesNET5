@@ -10,6 +10,7 @@
 
 • Patrón Repositorio </br>
 • Inyección de Dependencias </br>
-• 3 capas, Acceso a datos, Dominio y Presentación
-Trantando de seguir las mejores practicas segun mi conocimiento actual de momento.
+• 3 capas, Acceso a datos, Dominio y Presentación</br></br>
+
+<p>Creo que no lo terminé</p>
 
